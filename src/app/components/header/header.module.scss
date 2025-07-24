@@ -1,0 +1,52 @@
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  box-sizing: border-box;
+  height: 4.19rem;
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  transition: 0.2s;
+
+}
+
+.header__menu a {
+  transition: 0.2s;
+  &:hover {
+    color: var(--green);
+    transition: 0.2s;
+  }
+}
+
+.header__imageLogo {
+  position: relative;
+  width: 5.94rem;
+  height: 1.69rem;
+}
+
+.burger__menu {
+  display: none;
+}
+
+.burger__button {
+  position: relative;
+  height: 38px;
+  width: 38px;
+}
+
+@media (max-width: 768px) {
+  .header__menu {
+    display: none;
+  }
+
+  .burger__menu {
+    display: initial;
+  }
+}
