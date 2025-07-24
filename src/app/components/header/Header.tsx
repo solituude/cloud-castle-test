@@ -34,6 +34,7 @@ export const Header = () => {
             setOpenMenu(open);
         };
     return (
+
         <header className={s.header}>
             <div className={s.header__imageLogo}>
                 <Image src={'/logo.svg'} alt={'logo'} fill />

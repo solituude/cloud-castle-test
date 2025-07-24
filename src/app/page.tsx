@@ -31,8 +31,12 @@ export default function Home() {
 
 
                 </section>
-                <section id={"whatWaitingFor"}>
-                    <h2>Что ждёт за платинкой</h2>
+                <section id={"whatWaitingFor"} className={s.waitingFor__section}>
+                    <h2 className={s.h2}>Что ждёт за платинкой</h2>
+                    <div className={s.waitingForImg__container}>
+                        <Image src={'/forestWaitingFor.png'} alt={'forestWaitingFor'} fill/>
+                    </div>
+
                 </section>
 
                 <section id={"path"}>

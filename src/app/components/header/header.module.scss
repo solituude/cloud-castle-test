@@ -1,12 +1,14 @@
 
 .header {
-  display: flex;
+  //display: flex;
+  //align-self: flex-start;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 2rem;
   box-sizing: border-box;
   height: 4.19rem;
+  position: sticky;
 }
 
 .header__menu {
