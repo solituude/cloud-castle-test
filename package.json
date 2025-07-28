@@ -14,6 +14,8 @@
     "@mui/material": "^7.2.0",
     "next": "15.4.3",
     "react": "19.1.0",
+    "react-card-flip": "^1.2.3",
+    "react-card-flipper": "^1.0.1",
     "react-dom": "19.1.0",
     "sass": "^1.89.2"
   },

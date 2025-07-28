@@ -1,7 +1,7 @@
-
 .header {
-  //display: flex;
-  //align-self: flex-start;
+  display: flex;
+  width: 100%;
+  align-self: start;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -9,46 +9,86 @@
   box-sizing: border-box;
   height: 4.19rem;
   position: sticky;
-}
+  top: 0;
+  z-index: 10;
+  overflow: clip;
+  background-color: var(--background);
+  
+  @media (max-width: 1440px) {
+    padding: 20px 32px;
+  }
 
-.header__menu {
-  display: flex;
-  flex-direction: row;
-  gap: 4rem;
-  transition: 0.2s;
+  @media (max-width: 768px) {
+    padding: 16px 32px;
+  }
 
-}
+  @media (max-width: 375px) {
+    padding: 16px 16px;
+  }
 
-.header__menu a {
-  transition: 0.2s;
-  &:hover {
-    color: var(--green);
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
     transition: 0.2s;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    & a {
+      transition: 0.2s;
+
+      &:hover {
+        color: var(--green);
+        transition: 0.2s;
+      }
+    }
+  }
+
+  &__imageLogo {
+    position: relative;
+    width: 5.94rem;
+    height: 1.69rem;
   }
 }
 
-.header__imageLogo {
-  position: relative;
-  width: 5.94rem;
-  height: 1.69rem;
-}
+.burgerMenu {
+  display: flex;
+  flex-direction: column;
+  width: 314px;
+  background: var(--background);
+  height: 100vh;
+  padding: 70px 30px;
+  gap: 21px;
 
-.burger__menu {
-  display: none;
-}
-
-.burger__button {
-  position: relative;
-  height: 38px;
-  width: 38px;
-}
-
-@media (max-width: 768px) {
-  .header__menu {
+  &__container {
     display: none;
+
+    @media (max-width: 768px) {
+      display: initial;
+    }
+
   }
 
-  .burger__menu {
-    display: initial;
+  &__button {
+    position: relative;
+    width: 38px;
+    height: 38px;
   }
+
+  & span {
+    color: var(--white);
+    transition: 0.2s;
+    &:hover{
+      color: var(--green);
+      transition: 0.2s;
+    }
+  }
+}
+
+
+
+.scrolled {
+  box-shadow: 0 5px 30px 0 #07070740;
 }
